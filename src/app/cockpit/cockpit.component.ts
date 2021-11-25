@@ -31,6 +31,7 @@ export class CockpitComponent implements OnInit {
   ngOnInit(): void {}
 
   onAddServer() {
+    // onAddServer => trigger serverCreated event to emit data from child to parent
     this.serverCreated.emit({
       serverName: this.newServerName,
       serverContent: this.newServerContent,
@@ -38,6 +39,7 @@ export class CockpitComponent implements OnInit {
   }
 
   onAddBlueprint() {
+    // onAddBlueprint => trigger serverCreated event to emit data from child to parent
     this.blueprintCreated.emit({
       serverName: this.newServerName,
       serverContent: this.newServerContent,
