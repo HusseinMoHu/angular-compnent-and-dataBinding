@@ -7,7 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ServerElementComponent implements OnInit {
   // Input decorator make property exposed to the parent component
-  @Input() public element: { name: string; type: string; content: string };
+  @Input('srvElement') public element: {
+    name: string;
+    type: string;
+    content: string;
+  };
 
   constructor() {}
 
