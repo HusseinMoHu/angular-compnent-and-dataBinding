@@ -6,12 +6,16 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./cockpit.component.css'],
 })
 export class CockpitComponent implements OnInit {
+  // Goal: create custom event
+  // @Output() => send data to parent component
   // binding event => send data from child component to parent component
   @Output() serverCreated = new EventEmitter<{
     serverName: string;
     serverContent: string;
   }>();
 
+  // Goal: create custom event
+  // @Output() => send data to parent component
   // binding event => send data from child component to parent component
   @Output() blueprintCreated = new EventEmitter<{
     serverName: string;
