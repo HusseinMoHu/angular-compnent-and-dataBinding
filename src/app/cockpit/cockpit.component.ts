@@ -23,25 +23,25 @@ export class CockpitComponent implements OnInit {
   }>();
 
   // properties
-  newServerName: string;
+  // newServerName: string; // Replaced from ngModel to Local Reference Variable
   newServerContent: string;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  onAddServer() {
+  onAddServer(nameInput: HTMLInputElement) {
     // onAddServer => trigger serverCreated event to emit data from child to parent
     this.serverCreated.emit({
-      serverName: this.newServerName,
+      serverName: nameInput.value,
       serverContent: this.newServerContent,
     });
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(nameInput: HTMLInputElement) {
     // onAddBlueprint => trigger serverCreated event to emit data from child to parent
     this.blueprintCreated.emit({
-      serverName: this.newServerName,
+      serverName: nameInput.value,
       serverContent: this.newServerContent,
     });
   }
